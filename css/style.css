@@ -171,7 +171,21 @@ html {
         height: 300px !important;
     }
 
-
+/* Logo sizing */
+    .navbar-brand .logo {
+        height: 50px !important;
+        width: auto !important;
+    }
+    
+    /* Toggle button positioning */
+    .navbar-toggler {
+        margin-top: -63px;
+        margin-left: auto; /* Pushes to right */
+        border: none;
+        padding: 0.5rem;
+    }
+    
+    
     /* Navbar Fixes */
     .navbar-light .navbar-brand .logo {
         height: 60px !important;
@@ -1067,6 +1081,43 @@ html {
     }
 
 
+}
+
+/* Ensure navbar starts collapsed on mobile */
+@media (max-width: 991.98px) {
+    /* Navbar collapse behavior */
+    .navbar-collapse {
+        display: none !important;
+    }
+    .navbar-collapse.show {
+        display: block !important;
+        text-align: center;
+    }
+    
+    /* Contact button alignment */
+    .navbar .d-flex {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+    
+    /* Nav items styling */
+    .navbar-nav {
+        margin-bottom: 0;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+    
+    /* Button styling */
+    .btn-primary {
+        width: 80%;
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
 }
 
 .hero {
