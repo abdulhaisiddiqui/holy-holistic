@@ -71,6 +71,7 @@ html {
     .about {
         height: auto !important;
         padding: 40px 0 !important;
+        /* max-width: 200px; */
     }
 
     .about-section {
@@ -967,15 +968,20 @@ html {
 }
 
 .collapse {
-    /* background-color: #000; */
-    margin-right: 90px !important;
-    align-items: center !important;
+    display: flex !important;
+    justify-content: center;
+    flex-grow: 1;
+    margin-right: 0 !important;
 }
 
 .navbar-light .navbar-nav {
     /* justify-content: center !important; */
     /* background-color: #000; */
-    margin-right: 90px !important;
+    /* margin-right: 90px !important; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
