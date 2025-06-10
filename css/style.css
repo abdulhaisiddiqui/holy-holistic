@@ -726,9 +726,7 @@ html {
         margin-bottom: 0.5rem !important;
     }
 
-    .choose-section.card-item p {
-        font-size: 2px !important;
-    }
+   
 
     /* Fix for card items - add this at the end of your CSS */
 .cards-container .card-item {
@@ -754,11 +752,11 @@ html {
     padding-left: 0 !important;
 }
 
-.cards-container .card-item p {
+.choose-section.card-item p {
     font-size: 0.8rem !important; /* Fixed from 2px */
-    text-align: left !important;
-    width: 100% !important;
-}
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
     .testimonial-section {
         background-color: #4e95cb;
     }
