@@ -216,7 +216,44 @@
         </div>
     </div>
 </div>
+<style>
+    
+    @media (max-width:768px) {
+ /* Fix for invisible elements during animation */
+/* Replace the default fadeInRight with this optimized version */
+@keyframes smoothFadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scaleX(0.98);
+    transform-origin: left center;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scaleX(1);
+  }
+}
 
+/* Apply the custom animation */
+.animate__fadeInRight {
+  animation-name: smoothFadeInRight !important;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+/* Ensure all animated elements are visible by default */
+/* Prevent layout shifts */
+.hero-right .content {
+  overflow: hidden;
+}
+
+/* Ensure proper spacing */
+.hero-right .content > * {
+  margin-right: 0;
+  padding-right: 0;
+}
+    }
+</style>
 
     <!-- About Start -->
 <section class="about" id="about">
@@ -292,7 +329,7 @@
                                 <h1>Personal Care</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia
                                     reprehenderit quos nulla dolor minus tempora explicabo exercitationem.</p>
-                                <a href="" class="btn-primary">Learn More<i class="ri-arrow-right-s-line"></i></a>
+                                <a href="" class="service-btn btn-primary">Learn More<i class="ri-arrow-right-s-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -312,7 +349,7 @@
                         <div class="d-flex py-5">
 
                             <div class="ps-4 content-services">
-                                <img src="img/Light Housekeeping.jpg" alt="">
+                                <img src="img/Personal Care.png" alt="">
                                 <h1>Meal Preparation</h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore mollitia
                                     reprehenderit quos nulla dolor minus tempora explicabo exercitationem.</p>
@@ -389,7 +426,7 @@
                                     provident odit assumenda veniam vitae. Deleniti nulla voluptatem ad quis adipisci.</p>
                         </div>
                         <div class="card-item animate-on-scroll" data-animation="fadeInRight" data-delay="0.6s" style="animation-fill-mode: both;">
-                            <img src="img/istockphoto-1390310466-612x612.jpg" alt="icon">
+                            <img src="img/companionship_icon.png" alt="icon">
                             <h3>Trusted and Reliable</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et in ad itaque soluta hic
                                     blanditiis non dolor id voluptatem, accusamus commodi iste tempora quis alias
@@ -898,7 +935,7 @@
 
 
     <!-- Back to Top -->
-    <!-- <a href="#" style="border: none;" class="back-to-top btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+    <a href="#" style="border: none;" class="back-to-top btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

@@ -171,21 +171,23 @@ html {
         height: 300px !important;
     }
 
-/* Logo sizing */
+    /* Logo sizing */
     .navbar-brand .logo {
         height: 50px !important;
         width: auto !important;
     }
-    
+
     /* Toggle button positioning */
     .navbar-toggler {
         margin-top: -63px;
-        margin-left: auto; /* Pushes to right */
+        margin-left: auto;
+        /* Pushes to right */
+        margin-right: -20px !important;
         border: none;
         padding: 0.5rem;
     }
-    
-    
+
+
     /* Navbar Fixes */
     .navbar-light .navbar-brand .logo {
         height: 60px !important;
@@ -210,6 +212,9 @@ html {
     position: fixed;
     display: none;
     right: 45px;
+    padding: 10px !important;
+    height: 50px !important;
+    width: 50px !important;
     bottom: 45px;
     z-index: 99;
 }
@@ -394,6 +399,10 @@ html {
         height: 100%;
         margin-left: -30px !important;
     }
+    .hero .hero-image .content{
+        height: auto !important ;
+        min-height: 50vh !important;
+    }
 
     .hero .hero-image .content,
     h6,
@@ -519,12 +528,6 @@ html {
         left: 0;
     }
 
-    .about-section .side-img .img-2 {
-        /* display: none; */
-    }
-
-
-
     /* About Section End */
 
 
@@ -560,6 +563,7 @@ html {
     }
 
     .service .content .btn-primary {
+        /* align-items: left !important; */
         border: none;
         border-radius: 5px;
         width: 140px;
@@ -592,9 +596,17 @@ html {
         width: 280px;
     }
 
-    .service .card-services .content-services .btn-primary {
+    .service .card-services .content-services a {
         background-color: transparent;
         font-weight: 400;
+        background-color: transparent;
+        font-weight: 400;
+        /* Flexbox left alignment */
+        display: inline-flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        padding-left: 0;
+        /* Remove left padding for true edge alignment */
     }
 
     .service .card-services .content-services i {
@@ -602,7 +614,7 @@ html {
         font-size: 0.9rem;
         margin-left: 2px !important;
         margin: 0;
-        padding: 0;
+        padding: 2px 0 !important;
     }
 
     .service .row.g-4 {
@@ -614,7 +626,7 @@ html {
     /* Choose Section - Mobile First */
     .choose {
         width: 100% !important;
-        min-height: 250vh !important;
+        min-height: 100vh !important;
         padding: 40px 0 !important;
         background-color: #bde7fb !important;
         align-items: center;
@@ -699,6 +711,7 @@ html {
         transition: transform 0.3s !important;
         height: auto !important;
         min-height: 250px !important;
+
     }
 
     .choose-section.card-item img {
@@ -708,6 +721,7 @@ html {
     }
 
     .choose-section.card-item h3 {
+        
         font-size: 1.1rem !important;
         margin-bottom: 0.5rem !important;
     }
@@ -716,6 +730,35 @@ html {
         font-size: 2px !important;
     }
 
+    /* Fix for card items - add this at the end of your CSS */
+.cards-container .card-item {
+    text-align: left !important; /* Force text alignment */
+    align-items: flex-start !important; /* Flex alignment */
+}
+
+.cards-container .card-item * {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Specific element fixes */
+.cards-container .card-item img {
+    margin-left: 0 !important;
+    display: block !important; /* Removes image inline spacing */
+}
+
+.cards-container .card-item h3 {
+    text-align: left !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+}
+
+.cards-container .card-item p {
+    font-size: 0.8rem !important; /* Fixed from 2px */
+    text-align: left !important;
+    width: 100% !important;
+}
     .testimonial-section {
         background-color: #4e95cb;
     }
@@ -808,10 +851,7 @@ html {
         padding: 20px !important;
     }
 
-    .contact .btn-lg {
-        margin-left: 0 !important;
-        width: 100% !important;
-    }
+
 
     .gradient-custom {
         background: url('../img/Sec\ 4\ IMG\ s.png');
@@ -849,11 +889,16 @@ html {
         background-color: #fff;
         border-radius: 10px;
         color: #6cb1d2;
-        font-weight: 600;
+        font-weight: 400;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30%;
+        /* width: auto !important; */
+        max-width: 500px !important;
+        margin-left: 0 !important;
+        display: flex;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     /* Contact end */
@@ -960,6 +1005,52 @@ html {
         width: 140px;
     }
 
+    .hero .buttons {
+        display: inline-flex !important;
+        gap: 10px !important;
+        justify-content: flex-start !important;
+        /* Changed from align-items to justify-content */
+        margin-right: auto !important;
+        /* margin-bottom: 20px; */
+        /* Pushes container to the left */
+    }
+
+    /* Primary Button */
+    .hero .hero-image .content .buttons .btn-primary {
+    font-size: 0.7rem !important;
+    letter-spacing: 0px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    background-color: #faad1f !important;
+    box-shadow: 0px 3px 10px #000000 !important;
+}
+
+    /* Arrow Button */
+    .btn-arrow-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #faad1f;
+        color: #000 !important;
+        border-radius: 50%;
+        left: 20px !important;
+        box-shadow: 0px 3px 10px #000000 !important;
+        transition: all 0.3s ease;
+    }
+
+    .btn-arrow-right i {
+        padding-left: 10px;
+        font-size: 1.2rem !important;
+
+    }
+
+    /* Hover Effects */
+    .btn-primary:hover {
+        background: #9f6c0e;
+        transform: translateY(-2px);
+    }
 
 }
 
@@ -1085,15 +1176,17 @@ html {
 
 /* Ensure navbar starts collapsed on mobile */
 @media (max-width: 991.98px) {
+
     /* Navbar collapse behavior */
     .navbar-collapse {
         display: none !important;
     }
+
     .navbar-collapse.show {
         display: block !important;
         text-align: center;
     }
-    
+
     /* Contact button alignment */
     .navbar .d-flex {
         display: block;
@@ -1101,16 +1194,16 @@ html {
         padding: 10px 0;
         margin-top: 10px;
     }
-    
+
     /* Nav items styling */
     .navbar-nav {
         margin-bottom: 0;
     }
-    
+
     .nav-item {
         margin: 5px 0;
     }
-    
+
     /* Button styling */
     .btn-primary {
         width: 80%;
@@ -1363,8 +1456,13 @@ h1 {
     font-weight: 600;
     background-color: #faad1f;
     box-shadow: 1px 1px 4px #000000 !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
 
 }
+
 
 .service .card-services {
     color: #FFFFFF;
@@ -1439,6 +1537,7 @@ h1 {
     font-size: 0.8rem;
     color: #000;
 }
+
 .choose-section .content img {
     height: auto;
     max-width: 500px;
@@ -1545,7 +1644,8 @@ h6 {
     background-repeat: no-repeat;
     height: fit-content !important;
     width: 100%;
-    filter: brightness(0.5) contrast(1.2); /* Adjust values as needed */
+    filter: brightness(0.5) contrast(1.2);
+    /* Adjust values as needed */
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
