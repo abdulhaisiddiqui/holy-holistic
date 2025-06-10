@@ -1642,8 +1642,34 @@ h6 {
     background-repeat: no-repeat;
     height: fit-content !important;
     width: 100%;
-    filter: brightness(0.5) contrast(1.2);
-    /* Adjust values as needed */
+    position: relative; /* Add this for pseudo-element positioning */
+}
+
+/* Add pseudo-element for the dark overlay */
+.gradient-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* 0.5 opacity black overlay */
+    z-index: 0;
+}
+
+/* Ensure all content stays above the overlay */
+.card-registration,
+.card-body,
+.contact .head,
+.contact form,
+.contact .form-control {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove the filter from gradient-custom */
+.gradient-custom {
+    filter: none !important;
 }
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
